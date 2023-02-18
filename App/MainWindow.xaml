@@ -1,0 +1,25 @@
+<!-- Copyright (c) Microsoft Corporation and Contributors. -->
+<!-- Licensed under the MIT License. -->
+
+<Window
+    x:Class="App.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:App"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid ColumnDefinitions="*,Auto" RowDefinitions="32,*" Background="{ThemeResource LayerOnMicaBaseAltFillColorTransparent}">
+        <StackPanel Grid.Row="0" x:Name="AppTitleBar" Orientation="Horizontal" >
+            <TextBlock x:Name="Caption" Margin="10,0,0,0" Text="Сервер" VerticalAlignment="Center" FontFamily="{StaticResource ResourceKey=ContentControlThemeFontFamily}"/>
+        </StackPanel>
+        <StackPanel Grid.Row="1" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10,10,10,10">
+            <Button x:Name="myButton" Click="myButton_Click" MinWidth="150" Background="{ThemeResource SystemAccentColor}" HorizontalAlignment="Stretch">Пуск</Button>
+            <ProgressRing x:Name="Progress" IsActive="False" Width="100" Height="100"/>
+            <TextBox x:Name="Result" IsReadOnly="True" MinWidth="150" TextWrapping="Wrap" MaxWidth="200" HorizontalAlignment="Stretch"></TextBox>
+        </StackPanel>
+    </Grid>
+    
+    
+</Window>
